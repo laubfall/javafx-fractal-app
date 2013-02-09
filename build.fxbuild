@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://at.bestsolution.efxclipse.tooling.jdt/1.0" buildDirectory="${workspace}/Juliamenge/build">
+  <deploy>
+    <application name="Juliamenge" mainclass="Juliamenge" version="1.0" toolkit="fx"/>
+    <info vendor="Daniel Ludwig"/>
+  </deploy>
+  <signjar/>
+</anttasks:AntTask>

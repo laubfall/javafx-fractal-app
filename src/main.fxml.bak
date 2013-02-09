@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="779.0" prefHeight="640.0000999999975" prefWidth="779.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <VBox layoutX="0.0" layoutY="0.0" minWidth="779.0" prefHeight="-1.0" prefWidth="779.0">
+      <children>
+        <ToolBar maxWidth="-1.0" minHeight="34.0" prefHeight="34.0" prefWidth="779.0">
+          <items>
+            <Button fx:id="render" mnemonicParsing="false" text="Render" />
+            <Button fx:id="reset" mnemonicParsing="false" text="Reset" />
+            <Button fx:id="zoom" mnemonicParsing="false" text="Zoom" />
+          </items>
+        </ToolBar>
+        <HBox minWidth="779.0" prefHeight="606.0001220703125" prefWidth="779.0">
+          <children>
+            <Pane fx:id="renderPane" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" style="" />
+            <Accordion prefWidth="200.0">
+              <expandedPane>
+                <TitledPane fx:id="x1" animated="false" collapsible="false" text="Settings">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <GridPane layoutX="0.0" layoutY="0.0">
+                          <children>
+                            <Label text="c= a + i*b a:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <TextField fx:id="complexA" prefWidth="49.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <Label text="b:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <TextField fx:id="complexB" maxWidth="100.0" minWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Label text="Max. Iterations" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <TextField fx:id="maxIters" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <TextField fx:id="border" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            <Label text="Border" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                          </children>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </TitledPane>
+              </expandedPane>
+              <panes>
+                <fx:reference source="x1" />
+              </panes>
+            </Accordion>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
